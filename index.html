@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starts With You — Financial Life Skills for Young People</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f3d;
+    --navy-mid: #1a3260;
+    --orange: #f4701b;
+    --orange-light: #ff8c3a;
+    --cream: #faf8f4;
+    --white: #ffffff;
+    --grey-light: #f0ede8;
+    --grey-mid: #b8b4ac;
+    --grey-text: #6b6760;
+    --green: #1d7a5f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(15, 31, 61, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-logo span { color: var(--orange); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--orange-light) !important; color: var(--white) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    padding: 100px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(244,112,27,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(29,122,95,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--orange);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+    max-width: 440px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--orange-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(244,112,27,0.35);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(255,255,255,0.5);
+    color: var(--white);
+  }
+
+  .hero-visual {
+    position: relative;
+  }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+  }
+
+  .fred-intro {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .fred-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .fred-name {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  .fred-role {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+
+  .fred-online {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: #4ade80;
+  }
+
+  .fred-online::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--grey-light);
+    padding: 20px 40px;
+    text-align: center;
+  }
+
+  .trust-bar p {
+    font-size: 0.8rem;
+    color: var(--grey-text);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* SECTION STYLES */
+  .section {
+    padding: 100px 40px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    color: var(--grey-text);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  /* COURSES */
+  .courses-section {
+    background: var(--cream);
+    padding: 100px 40px;
+  }
+
+  .courses-header {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .courses-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .course-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .course-card:hover:not(.coming-soon) {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(15,31,61,0.12);
+    border-color: var(--orange);
+  }
+
+  .course-card.coming-soon {
+    opacity: 0.55;
+    cursor: default;
+  }
+
+  .course-cover {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    padding: 24px 20px;
+  }
+
+  .course-cover-money { background: #111111; }
+  .course-cover-careers { background: #e8e4d9; }
+  .course-cover-self { background: #e8440a; }
+  .course-cover-investing { background: #0d3b2e; }
+
+  .course-cover.greyed { filter: grayscale(1); opacity: 0.45; }
+
+  .cover-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .course-cover-money .cover-number,
+  .course-cover-investing .cover-number { color: rgba(255,255,255,0.45); }
+  .course-cover-careers .cover-number { color: rgba(0,0,0,0.35); }
+  .course-cover-self .cover-number { color: rgba(255,255,255,0.6); }
+
+  .cover-series {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .course-cover-money .cover-series,
+  .course-cover-investing .cover-series { color: rgba(255,255,255,0.4); }
+  .course-cover-careers .cover-series { color: rgba(0,0,0,0.3); }
+  .course-cover-self .cover-series { color: rgba(255,255,255,0.55); }
+
+  .cover-word {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    font-size: 2.8rem;
+  }
+  .course-cover-money .cover-word { color: #ffffff; }
+  .course-cover-careers .cover-word { color: #111111; }
+  .course-cover-self .cover-word { color: #ffffff; }
+  .course-cover-investing .cover-word { color: #ffffff; }
+
+  .cover-author {
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .course-cover-money .cover-author,
+  .course-cover-investing .cover-author { color: rgba(255,255,255,0.45); }
+  .course-cover-careers .cover-author { color: rgba(0,0,0,0.35); }
+  .course-cover-self .cover-author { color: rgba(255,255,255,0.6); }
+
+  .course-badge {
+    position: absolute;
+    top: 12px; right: 12px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  .badge-live {
+    background: #4ade80;
+    color: #052e16;
+  }
+
+  .badge-soon {
+    background: rgba(0,0,0,0.25);
+    color: rgba(255,255,255,0.7);
+  }
+
+  .badge-soon-dark {
+    background: rgba(0,0,0,0.15);
+    color: rgba(0,0,0,0.45);
+  }
+
+  .course-body {
+    padding: 24px;
+  }
+
+  .course-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 6px;
+  }
+
+  .course-name {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--navy);
+  }
+
+  .course-desc {
+    font-size: 0.82rem;
+    color: var(--grey-text);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .course-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--grey-mid);
+  }
+
+  .course-modules {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* MONEY COURSE DETAIL */
+  .course-detail {
+    background: var(--white);
+    padding: 100px 40px;
+  }
+
+  .course-detail-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .course-detail-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+  }
+
+  .module-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .module-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--grey-light);
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .module-item:hover {
+    border-color: var(--orange);
+    background: rgba(244,112,27,0.04);
+  }
+
+  .module-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .module-text {}
+  .module-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 3px; }
+  .module-sub { font-size: 0.78rem; color: var(--grey-text); }
+
+  /* VIDEO SECTION */
+  .video-section {
+    background: var(--navy);
+    padding: 100px 40px;
+  }
+
+  .video-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .video-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .video-tab {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.6);
+    background: transparent;
+    transition: all 0.2s;
+  }
+
+  .video-tab.active, .video-tab:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: white;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .video-main {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16/9;
+  }
+
+  .video-main iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .video-playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .playlist-item {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .playlist-item:hover, .playlist-item.active {
+    background: rgba(255,255,255,0.08);
+    border-color: var(--orange);
+  }
+
+  .playlist-thumb {
+    width: 48px;
+    height: 36px;
+    border-radius: 6px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .playlist-info {}
+  .playlist-title { font-size: 0.82rem; font-weight: 600; color: white; margin-bottom: 3px; }
+  .playlist-dur { font-size: 0.72rem; color: rgba(255,255,255,0.45); }
+
+  /* COACH FRED */
+  .fred-section {
+    background: var(--cream);
+    padding: 100px 40px;
+  }
+
+  .fred-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .fred-visual-box {
+    background: var(--navy);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fred-visual-box::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(244,112,27,0.2) 0%, transparent 70%);
+  }
+
+  .fred-big-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    margin: 0 auto 20px;
+    border: 4px solid rgba(255,255,255,0.15);
+  }
+
+  .fred-chat-preview {
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 24px;
+    text-align: left;
+  }
+
+  .chat-bubble {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+  }
+
+  .chat-attribution {
+    font-size: 0.7rem;
+    color: var(--orange);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .fred-content {}
+
+  .fred-content h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .fred-content p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--grey-text);
+    margin-bottom: 20px;
+  }
+
+  .fred-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .fred-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .fred-feature-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(244,112,27,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .fred-feature-text {}
+  .fred-feature-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
+  .fred-feature-desc { font-size: 0.82rem; color: var(--grey-text); line-height: 1.5; }
+
+  .btn-fred {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-top: 32px;
+  }
+
+  .btn-fred:hover {
+    background: var(--navy-mid);
+    transform: translateY(-1px);
+  }
+
+  /* ABOUT FREDRIK */
+  .about-section {
+    background: var(--white);
+    padding: 100px 40px;
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-content h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--grey-text);
+    margin-bottom: 18px;
+  }
+
+  .about-quote {
+    border-left: 3px solid var(--orange);
+    padding-left: 24px;
+    margin: 32px 0;
+  }
+
+  .about-quote p {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .about-visual {
+    background: var(--navy);
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .about-books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .book-item {
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+    position: relative;
+  }
+
+  .book-item-live { background: rgba(244,112,27,0.15); border: 1px solid rgba(244,112,27,0.3); }
+  .book-item-soon { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); opacity: 0.5; }
+
+  .book-emoji { font-size: 2rem; margin-bottom: 8px; }
+  .book-title { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.85); line-height: 1.3; }
+  .book-status { font-size: 0.65rem; margin-top: 6px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .status-live { color: #4ade80; }
+  .status-soon { color: rgba(255,255,255,0.3); }
+
+  /* SCHOOL CTA */
+  .school-section {
+    background: var(--orange);
+    padding: 80px 40px;
+  }
+
+  .school-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .school-inner h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .school-inner p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 540px;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--orange);
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy);
+    padding: 80px 40px;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-left h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .contact-left p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .contact-link:hover { color: var(--orange); }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-group {}
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.25);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--orange);
+  }
+
+  .form-group textarea { height: 100px; resize: vertical; }
+  .form-group select { cursor: pointer; }
+  .form-group select option { background: var(--navy); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 32px 40px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .footer-logo span { color: var(--orange); }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: rgba(15,31,61,0.98);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      padding: 20px;
+      gap: 4px;
+      z-index: 99;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { list-style: none; }
+    .nav-links a { display: block; padding: 12px 16px; font-size: 1rem; border-radius: 8px; }
+    .nav-links a:hover { background: rgba(255,255,255,0.08); }
+    .nav-cta { background: var(--orange) !important; color: white !important; text-align: center; margin-top: 8px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { display: none; }
+    .courses-grid { grid-template-columns: 1fr 1fr; }
+    .courses-header { flex-direction: column; gap: 20px; align-items: flex-start; }
+    .course-detail-header { grid-template-columns: 1fr; gap: 40px; }
+    .module-list { grid-template-columns: 1fr; }
+    .video-grid { grid-template-columns: 1fr; }
+    .fred-inner { grid-template-columns: 1fr; gap: 40px; }
+    .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .school-inner { grid-template-columns: 1fr; gap: 32px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+    .section { padding: 60px 20px; }
+    .hero { padding: 100px 20px 60px; }
+  }
+
+  @media (max-width: 600px) {
+    .courses-grid { grid-template-columns: 1fr; }
+    .about-books { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* FADE IN ANIMATION */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Starts<span>With</span>You</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#courses" onclick="closeMenu()">Courses</a></li>
+    <li><a href="#videos" onclick="closeMenu()">Watch</a></li>
+    <li><a href="#coach-fred" onclick="closeMenu()">Coach Fred</a></li>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Schools — Get Access</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Financial & Life Skills for Young People</p>
+      <h1 class="hero-title">The skills school<br>never <em>taught you.</em></h1>
+      <p class="hero-subtitle">Real-world money, careers, and self-leadership — taught honestly, in a language young people actually understand.</p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn-primary">Explore the Courses</a>
+        <a href="#coach-fred" class="btn-secondary">Meet Coach Fred →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="fred-intro">
+          <img src="coachfred.jpg" alt="Coach Fred" style="width:44px; height:44px; border-radius:50%; object-fit:cover; object-position:top; flex-shrink:0;">
+          <div>
+            <div class="fred-name">Coach Fred</div>
+            <div class="fred-role">Your AI learning guide</div>
+          </div>
+          <div class="fred-online">Online</div>
+        </div>
+        <div style="font-size:0.82rem; line-height:1.75; color:rgba(255,255,255,0.65);">
+          Built on 4 published books and years of experience as a finance professional, coach, father, and husband.<br><br>
+          Coach Fred is the virtual me — available to every student, any time.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <p>Based on the Starts With You book series &nbsp;·&nbsp; Built for schools &nbsp;·&nbsp; Powered by AI coaching</p>
+</div>
+
+<!-- COURSES -->
+<section class="courses-section" id="courses">
+  <div class="courses-header fade-in">
+    <div>
+      <p class="section-tag">The Curriculum</p>
+      <h2 class="section-title">Four courses.<br>One complete foundation.</h2>
+    </div>
+    <p style="font-size:0.85rem; color:var(--grey-text); max-width:280px; text-align:right;">Start with Money. Careers, Self-Leadership and Investing coming soon.</p>
+  </div>
+  <div class="courses-grid">
+
+    <!-- Money -->
+    <a href="#videos" class="course-card fade-in">
+      <div class="course-cover course-cover-money">
+        <div>
+          <div class="cover-number">01</div>
+          <div class="cover-series">Starts With You</div>
+          <div class="cover-word">MONEY</div>
+        </div>
+        <div class="cover-author">Per-Fredrik Emanuelsson</div>
+        <span class="course-badge badge-live">Live Now</span>
+      </div>
+      <div class="course-body">
+        <p class="course-number">Course 01</p>
+        <h3 class="course-name">Money Starts With You</h3>
+        <p class="course-desc">What money really is, how it works, and how to make it work for you — starting now.</p>
+        <div class="course-meta">
+          <span class="course-modules">10 modules</span>
+          <span style="color:var(--orange); font-weight:600; font-size:0.8rem;">Start →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Careers -->
+    <div class="course-card coming-soon fade-in">
+      <div class="course-cover course-cover-careers greyed">
+        <div>
+          <div class="cover-number">02</div>
+          <div class="cover-series">Starts With You</div>
+          <div class="cover-word">CAREERS</div>
+        </div>
+        <div class="cover-author">Per-Fredrik Emanuelsson</div>
+        <span class="course-badge badge-soon-dark">Coming Soon</span>
+      </div>
+      <div class="course-body">
+        <p class="course-number">Course 02</p>
+        <h3 class="course-name">Careers Starts With You</h3>
+        <p class="course-desc">How to find work that fits who you are — not just what you think you should do.</p>
+        <div class="course-meta">
+          <span class="course-modules">10 modules</span>
+          <span style="color:var(--grey-mid); font-size:0.8rem;">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Self Leadership -->
+    <div class="course-card coming-soon fade-in">
+      <div class="course-cover course-cover-self greyed">
+        <div>
+          <div class="cover-number">03</div>
+          <div class="cover-series">Starts With You</div>
+          <div class="cover-word" style="font-size:1.45rem;">SELF-LEADERSHIP</div>
+        </div>
+        <div class="cover-author">Per-Fredrik Emanuelsson</div>
+        <span class="course-badge badge-soon">Coming Soon</span>
+      </div>
+      <div class="course-body">
+        <p class="course-number">Course 03</p>
+        <h3 class="course-name">Self-Leadership Starts With You</h3>
+        <p class="course-desc">Mindset, discipline, and the inner tools that determine whether everything else works.</p>
+        <div class="course-meta">
+          <span class="course-modules">10 modules</span>
+          <span style="color:var(--grey-mid); font-size:0.8rem;">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Investing -->
+    <div class="course-card coming-soon fade-in">
+      <div class="course-cover course-cover-investing greyed">
+        <div>
+          <div class="cover-number">04</div>
+          <div class="cover-series">Starts With You</div>
+          <div class="cover-word">INVESTING</div>
+        </div>
+        <div class="cover-author">Per-Fredrik Emanuelsson</div>
+        <span class="course-badge badge-soon">Coming Soon</span>
+      </div>
+      <div class="course-body">
+        <p class="course-number">Course 04</p>
+        <h3 class="course-name">Investing Starts With You</h3>
+        <p class="course-desc">How markets work, how to think about risk, and how to build wealth over time.</p>
+        <div class="course-meta">
+          <span class="course-modules">10 modules</span>
+          <span style="color:var(--grey-mid); font-size:0.8rem;">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MONEY COURSE MODULES -->
+<section class="course-detail" id="modules">
+  <div class="course-detail-inner">
+    <div class="course-detail-header fade-in">
+      <div>
+        <p class="section-tag">Course 01 — Money</p>
+        <h2 class="section-title">What's inside the<br>Money course</h2>
+        <p class="section-sub" style="margin-top:16px;">10 modules built around the book <em>Money Starts With You</em>. Each one is a short video followed by a reflective question — no lectures, no jargon.</p>
+        <a href="#videos" class="btn-primary" style="margin-top:32px; display:inline-block;">Watch Module 1 →</a>
+      </div>
+      <div class="module-list">
+        <a href="#videos" class="module-item">
+          <div class="module-num" style="background:var(--orange);">1</div>
+          <div class="module-text">
+            <div class="module-title">What Does Success Mean to You?</div>
+            <div class="module-sub">Define your own version</div>
+          </div>
+        </a>
+        <a href="#videos" class="module-item">
+          <div class="module-num" style="background:var(--orange);">2</div>
+          <div class="module-text">
+            <div class="module-title">What Is Money Really?</div>
+            <div class="module-sub">Beyond the obvious answer</div>
+          </div>
+        </a>
+        <a href="#videos" class="module-item">
+          <div class="module-num" style="background:var(--orange);">3</div>
+          <div class="module-text">
+            <div class="module-title">Creating Value</div>
+            <div class="module-sub">The four levers</div>
+          </div>
+        </a>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">4</div>
+          <div class="module-text">
+            <div class="module-title">The Road Ahead</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">5</div>
+          <div class="module-text">
+            <div class="module-title">Independence Is Not an Accident</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">6</div>
+          <div class="module-text">
+            <div class="module-title">Backing Your Goals</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">7</div>
+          <div class="module-text">
+            <div class="module-title">Debt — Danger or Tool?</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">8</div>
+          <div class="module-text">
+            <div class="module-title">Delayed Gratification</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">9</div>
+          <div class="module-text">
+            <div class="module-title">Time Is Your Greatest Asset</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+        <div class="module-item" style="opacity:0.5; cursor:default;">
+          <div class="module-num">10</div>
+          <div class="module-text">
+            <div class="module-title">Doing It + Power of Choice</div>
+            <div class="module-sub">Coming soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="video-section" id="videos">
+  <div class="video-section-inner">
+    <p class="section-tag" style="color:var(--orange);">Watch the Course</p>
+    <h2 class="section-title" style="color:white; margin-bottom:8px;">Money Starts With You</h2>
+    <p style="color:rgba(255,255,255,0.55); font-size:0.95rem; margin-bottom:40px;">Start with the introduction, then work through the modules in order.</p>
+
+    <div class="video-tabs">
+      <button class="video-tab active" onclick="switchVideo('intro', this)">Introduction</button>
+      <button class="video-tab" onclick="switchVideo('mod1', this)">Module 1</button>
+      <button class="video-tab" onclick="switchVideo('mod2', this)">Module 2</button>
+      <button class="video-tab" onclick="switchVideo('mod3', this)">Module 3</button>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-main">
+        <iframe id="main-video"
+          src="https://www.youtube.com/embed/UdtL2x7T-ws"
+          title="Starts With You Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-playlist">
+        <div class="playlist-item active" onclick="switchVideo('intro', null, this)">
+          <img src="https://img.youtube.com/vi/UdtL2x7T-ws/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
+          <div class="playlist-info">
+            <div class="playlist-title">Introduction — Starts With You</div>
+            <div class="playlist-dur">Who Fredrik is and what this is</div>
+          </div>
+        </div>
+        <div class="playlist-item" onclick="switchVideo('mod1', null, this)">
+          <img src="https://img.youtube.com/vi/FtHQAkXNg2A/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
+          <div class="playlist-info">
+            <div class="playlist-title">Module 1 — What Does Success Mean to You?</div>
+            <div class="playlist-dur">Define your own version first</div>
+          </div>
+        </div>
+        <div class="playlist-item" onclick="switchVideo('mod2', null, this)">
+          <img src="https://img.youtube.com/vi/wHkv1pHaV6o/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
+          <div class="playlist-info">
+            <div class="playlist-title">Module 2 — What Is Money Really?</div>
+            <div class="playlist-dur">Beyond the obvious answer</div>
+          </div>
+        </div>
+        <div class="playlist-item" onclick="switchVideo('mod3', null, this)">
+          <img src="https://img.youtube.com/vi/DZ62hyi52_0/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
+          <div class="playlist-info">
+            <div class="playlist-title">Module 3 — Creating Value</div>
+            <div class="playlist-dur">The four levers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH FRED -->
+<section class="fred-section" id="coach-fred">
+  <div class="fred-inner">
+    <div class="fred-visual-box fade-in">
+      <img src="coachfred.jpg" alt="Coach Fred" style="width:120px; height:120px; border-radius:50%; object-fit:cover; object-position:top; margin:0 auto 20px; display:block; border:4px solid rgba(255,255,255,0.15);">
+      <div style="color:white; font-family:'Fraunces',serif; font-size:1.4rem; font-weight:700;">Coach Fred</div>
+      <div style="color:rgba(255,255,255,0.5); font-size:0.82rem; margin-top:4px;">AI Learning Guide</div>
+      <div class="fred-chat-preview">
+        <p class="chat-bubble">"Money isn't about being rich. It's about having options. The sooner you understand that, the better every decision becomes."</p>
+        <p class="chat-attribution">— Coach Fred</p>
+      </div>
+    </div>
+    <div class="fred-content fade-in">
+      <p class="section-tag">Meet Your AI Guide</p>
+      <h2>Coach Fred is always<br>in the room.</h2>
+      <p>Every student gets access to Coach Fred — an AI guide trained on the Starts With You methodology. Ask anything. Get honest, age-appropriate answers that push you to think, not just consume.</p>
+      <p>Fred doesn't give you the answer. He helps you find it.</p>
+      <div class="fred-features">
+        <div class="fred-feature">
+          <div class="fred-feature-icon" style="background:rgba(244,112,27,0.1); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--orange);">24/7</div>
+          <div class="fred-feature-text">
+            <div class="fred-feature-title">Always available</div>
+            <div class="fred-feature-desc">24/7, between lessons, before exams, whenever a question comes up.</div>
+          </div>
+        </div>
+        <div class="fred-feature">
+          <div class="fred-feature-icon" style="background:rgba(244,112,27,0.1); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--orange);">Safe</div>
+          <div class="fred-feature-text">
+            <div class="fred-feature-title">Safe and age-appropriate</div>
+            <div class="fred-feature-desc">Built with safeguarding in mind. Stays on topic. Never inappropriate.</div>
+          </div>
+        </div>
+        <div class="fred-feature">
+          <div class="fred-feature-icon" style="background:rgba(244,112,27,0.1); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--orange);">Ask</div>
+          <div class="fred-feature-text">
+            <div class="fred-feature-title">Socratic, not preachy</div>
+            <div class="fred-feature-desc">Fred asks questions back. The goal is thinking, not passive listening.</div>
+          </div>
+        </div>
+      </div>
+      <a href="/coach_fred_chat.html" class="btn-fred">Talk to Coach Fred →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT FREDRIK -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-content fade-in">
+      <p class="section-tag">About Fredrik</p>
+      <h2>Built from real<br>experience.</h2>
+      <p>Fredrik Emanuelsson spent years in finance and business before realising that the most valuable things he'd learned — about money, careers, and life — were never taught in school.</p>
+      <p>So he wrote four books. Then built a platform. Then trained an AI to help scale the conversation to every classroom.</p>
+      <div class="about-quote">
+        <p>"Everything starts with you. Not your circumstances, not your school, not your parents. You."</p>
+      </div>
+      <p>The Starts With You series is already published and in hands of young people across Portugal and beyond. This platform brings it to life.</p>
+    </div>
+    <div class="about-visual fade-in">
+      <div style="color:white; font-family:'Fraunces',serif; font-size:1.1rem; font-weight:700; margin-bottom:8px;">The Book Series</div>
+      <div style="color:rgba(255,255,255,0.45); font-size:0.8rem; margin-bottom:24px;">Four books. One complete foundation.</div>
+      <div class="about-books">
+        <div class="book-item book-item-live" style="background:#111; border:none; padding:16px 12px;">
+          <div style="font-family:'Fraunces',serif; font-weight:900; font-size:1.1rem; color:white; line-height:1; margin-bottom:8px;">MONEY</div>
+          <div class="book-title" style="color:rgba(255,255,255,0.6);">Money Starts With You</div>
+          <div class="book-status status-live">● Live on Amazon</div>
+        </div>
+        <div class="book-item book-item-soon" style="background:#e8e4dc; border:none; padding:16px 12px;">
+          <div style="font-family:'Fraunces',serif; font-weight:900; font-size:1.1rem; color:#111; line-height:1; margin-bottom:8px;">CAREERS</div>
+          <div class="book-title" style="color:rgba(0,0,0,0.5);">Careers Starts With You</div>
+          <div class="book-status" style="color:rgba(0,0,0,0.3);">Coming Soon</div>
+        </div>
+        <div class="book-item book-item-soon" style="background:#e8440a; border:none; padding:16px 12px;">
+          <div style="font-family:'Fraunces',serif; font-weight:900; font-size:1.1rem; color:white; line-height:1; margin-bottom:8px;">SELF-LEADERSHIP</div>
+          <div class="book-title" style="color:rgba(255,255,255,0.7);">Self-Leadership Starts With You</div>
+          <div class="book-status" style="color:rgba(255,255,255,0.5);">Coming Soon</div>
+        </div>
+        <div class="book-item book-item-soon" style="background:#1a1a2e; border:none; padding:16px 12px;">
+          <div style="font-family:'Fraunces',serif; font-weight:900; font-size:1.1rem; color:white; line-height:1; margin-bottom:8px;">INVESTING</div>
+          <div class="book-title" style="color:rgba(255,255,255,0.6);">Investing Starts With You</div>
+          <div class="book-status" style="color:rgba(255,255,255,0.3);">In Progress</div>
+        </div>
+      </div>
+      <a href="https://amazon.com" target="_blank" style="display:inline-block; margin-top:24px; font-size:0.8rem; color:var(--orange); text-decoration:none; font-weight:600;">Get the books on Amazon →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOL CTA -->
+<section class="school-section">
+  <div class="school-inner">
+    <div>
+      <h2>Bring this to your school.</h2>
+      <p>We work directly with school coordinators to integrate Starts With You into the curriculum. Pilot access available now. Get in touch and we'll show you how it works.</p>
+    </div>
+    <a href="#contact" class="btn-white">Contact Us →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left fade-in">
+      <h2>Get in touch.</h2>
+      <p>Whether you're a school coordinator, a parent, or just curious — we'd love to hear from you.</p>
+      <div class="contact-links">
+        <a href="https://www.startswithyouproject.com" class="contact-link">🌐 startswithyouproject.com</a>
+        <a href="mailto:pfemanuelsson@gmail.com" class="contact-link">✉️ pfemanuelsson@gmail.com</a>
+        <a href="https://www.instagram.com/startswithyouproject/" target="_blank" class="contact-link">📸 @startswithyouproject</a>
+      </div>
+    </div>
+    <div class="contact-form fade-in">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Fredrik Emanuelsson">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@school.com">
+      </div>
+      <div class="form-group">
+        <label>I am a...</label>
+        <select>
+          <option>School coordinator</option>
+          <option>Teacher</option>
+          <option>Parent</option>
+          <option>Student</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us about your school or what you're looking for..."></textarea>
+      </div>
+      <button type="button" class="btn-primary" style="width:100%; border:none; cursor:pointer; font-size:1rem; padding:16px;">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Starts<span>With</span>You</div>
+    <div style="display:flex; gap:20px; align-items:center;">
+      <a href="https://www.instagram.com/startswithyouproject/" target="_blank" style="color:rgba(255,255,255,0.4); font-size:0.78rem; text-decoration:none;">Instagram</a>
+      <a href="mailto:pfemanuelsson@gmail.com" style="color:rgba(255,255,255,0.4); font-size:0.78rem; text-decoration:none;">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Starts With You. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Video switcher
+  const videos = {
+    intro: 'https://www.youtube.com/embed/UdtL2x7T-ws',
+    mod1:  'https://www.youtube.com/embed/FtHQAkXNg2A',
+    mod2:  'https://www.youtube.com/embed/wHkv1pHaV6o',
+    mod3:  'https://www.youtube.com/embed/DZ62hyi52_0'
+  };
+
+  function switchVideo(key, tabEl, playlistEl) {
+    document.getElementById('main-video').src = videos[key];
+
+    // Update tabs
+    if (tabEl) {
+      document.querySelectorAll('.video-tab').forEach(t => t.classList.remove('active'));
+      tabEl.classList.add('active');
+    }
+
+    // Update playlist
+    document.querySelectorAll('.playlist-item').forEach(p => p.classList.remove('active'));
+    if (playlistEl) playlistEl.classList.add('active');
+
+    // Sync tab and playlist
+    const tabIndex = ['intro','mod1','mod2','mod3'].indexOf(key);
+    const tabs = document.querySelectorAll('.video-tab');
+    const items = document.querySelectorAll('.playlist-item');
+    tabs.forEach(t => t.classList.remove('active'));
+    items.forEach(i => i.classList.remove('active'));
+    if (tabs[tabIndex]) tabs[tabIndex].classList.add('active');
+    if (items[tabIndex]) items[tabIndex].classList.add('active');
+  }
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    const btn = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+</script>
+</body>
+</html>
