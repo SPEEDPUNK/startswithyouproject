@@ -19,30 +19,20 @@
     --green: #22c55e;
     --red: #ef4444;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--navy);
-  }
-
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(15,31,61,0.97);
-    backdrop-filter: blur(10px);
+    background: rgba(15,31,61,0.97); backdrop-filter: blur(10px);
     padding: 0 32px; height: 60px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-logo { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.1rem; color: white; text-decoration: none; }
   .nav-logo span { color: var(--orange); }
-  .nav-back { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; transition: all 0.2s; }
-  .nav-back:hover { color: white; border-color: rgba(255,255,255,0.4); }
+  .nav-back { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; }
 
-  /* PROGRESS BAR */
   .progress-bar-wrap {
     position: fixed; top: 60px; left: 0; right: 0; z-index: 99;
     background: var(--navy-mid); padding: 10px 32px;
@@ -53,12 +43,9 @@
   .progress-fill { height: 100%; background: var(--orange); border-radius: 3px; transition: width 0.5s ease; width: 0%; }
   .progress-pct { font-size: 0.72rem; font-weight: 700; color: var(--orange); min-width: 36px; text-align: right; }
 
-  /* HERO */
   .course-hero {
-    margin-top: 100px;
-    background: var(--navy);
-    padding: 60px 32px;
-    text-align: center;
+    margin-top: 100px; background: var(--navy);
+    padding: 60px 32px; text-align: center;
   }
   .course-hero-inner { max-width: 700px; margin: 0 auto; }
   .course-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
@@ -67,55 +54,30 @@
   .course-stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
   .stat { text-align: center; }
   .stat-n { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 900; color: var(--orange); line-height: 1; }
-  .stat-l { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 4px; letter-spacing: 0.05em; }
+  .stat-l { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
 
-  /* MAIN LAYOUT */
   .course-body { max-width: 900px; margin: 0 auto; padding: 48px 32px 80px; }
 
-  /* INTRO SECTION */
-  .intro-section {
-    background: white; border-radius: 16px; padding: 36px;
-    margin-bottom: 32px; border: 1px solid rgba(0,0,0,0.06);
-  }
-  .intro-section h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .intro-section { background: white; border-radius: 16px; padding: 36px; margin-bottom: 32px; border: 1px solid rgba(0,0,0,0.06); }
+  .intro-section h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+  .intro-video-wrap { border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 16/9; margin-bottom: 20px; }
+  .intro-video-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
   .intro-section p { font-size: 0.95rem; line-height: 1.75; color: var(--grey-text); margin-bottom: 12px; }
   .intro-section p:last-child { margin-bottom: 0; }
 
-  /* CHAPTER */
   .chapter { margin-bottom: 48px; }
-  .chapter-header {
-    display: flex; align-items: center; gap: 16px;
-    margin-bottom: 20px; padding-bottom: 16px;
-    border-bottom: 2px solid var(--navy);
-  }
-  .chapter-num {
-    width: 40px; height: 40px; border-radius: 10px;
-    background: var(--navy); color: white;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
-  }
+  .chapter-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--navy); }
+  .chapter-num { width: 40px; height: 40px; border-radius: 10px; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
   .chapter-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; }
   .chapter-progress { margin-left: auto; font-size: 0.72rem; color: var(--grey-text); font-weight: 600; }
 
-  /* MODULE */
-  .module {
-    background: white; border-radius: 14px; margin-bottom: 16px;
-    border: 1px solid rgba(0,0,0,0.06); overflow: hidden;
-    transition: box-shadow 0.2s;
-  }
+  .module { background: white; border-radius: 14px; margin-bottom: 16px; border: 1px solid rgba(0,0,0,0.06); overflow: hidden; transition: box-shadow 0.2s; }
   .module:hover { box-shadow: 0 4px 20px rgba(15,31,61,0.08); }
   .module.completed { border-color: rgba(34,197,94,0.3); }
   .module.locked { opacity: 0.5; pointer-events: none; }
 
-  .module-header {
-    display: flex; align-items: center; gap: 14px;
-    padding: 20px 24px; cursor: pointer;
-  }
-  .module-status {
-    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.75rem; font-weight: 700;
-  }
+  .module-header { display: flex; align-items: center; gap: 14px; padding: 20px 24px; cursor: pointer; }
+  .module-status { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
   .module-status.pending { background: var(--grey-light); color: var(--grey-text); }
   .module-status.active { background: var(--orange); color: white; }
   .module-status.done { background: var(--green); color: white; }
@@ -124,36 +86,23 @@
   .module-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 2px; }
   .module-title { font-weight: 600; font-size: 0.95rem; color: var(--navy); }
 
-  .module-tag {
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; padding: 4px 10px; border-radius: 20px;
-  }
+  .module-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; }
   .tag-watch { background: rgba(244,112,27,0.1); color: var(--orange); }
   .tag-done { background: rgba(34,197,94,0.1); color: #16a34a; }
   .tag-locked { background: var(--grey-light); color: var(--grey-mid); }
 
-  /* MODULE CONTENT */
   .module-content { padding: 0 24px 24px; display: none; }
   .module-content.open { display: block; }
 
-  .video-wrap {
-    border-radius: 10px; overflow: hidden; background: #000;
-    aspect-ratio: 16/9; margin-bottom: 20px;
-  }
+  .video-wrap { border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 16/9; margin-bottom: 20px; }
   .video-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
 
-  /* QUIZ */
   .quiz { border-top: 1px solid var(--grey-light); padding-top: 20px; }
   .quiz-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
   .quiz-q { margin-bottom: 20px; }
   .quiz-q-text { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; line-height: 1.5; }
   .quiz-options { display: flex; flex-direction: column; gap: 8px; }
-  .quiz-opt {
-    display: flex; align-items: center; gap: 10px;
-    padding: 10px 14px; border-radius: 8px; cursor: pointer;
-    border: 1px solid var(--grey-light); transition: all 0.2s;
-    font-size: 0.88rem; line-height: 1.4;
-  }
+  .quiz-opt { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; cursor: pointer; border: 1px solid var(--grey-light); transition: all 0.2s; font-size: 0.88rem; line-height: 1.4; }
   .quiz-opt:hover { border-color: var(--orange); background: rgba(244,112,27,0.04); }
   .quiz-opt.selected { border-color: var(--orange); background: rgba(244,112,27,0.08); }
   .quiz-opt.correct { border-color: var(--green); background: rgba(34,197,94,0.08); color: #16a34a; }
@@ -164,82 +113,50 @@
   .quiz-feedback.correct { background: rgba(34,197,94,0.1); color: #16a34a; display: block; }
   .quiz-feedback.wrong { background: rgba(239,68,68,0.1); color: var(--red); display: block; }
 
-  .quiz-submit {
-    background: var(--navy); color: white; border: none;
-    padding: 12px 28px; border-radius: 8px; font-size: 0.88rem;
-    font-weight: 600; cursor: pointer; margin-top: 16px;
-    font-family: 'DM Sans', sans-serif; transition: all 0.2s;
-  }
+  .quiz-submit { background: var(--navy); color: white; border: none; padding: 12px 28px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; cursor: pointer; margin-top: 16px; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
   .quiz-submit:hover { background: var(--navy-mid); }
   .quiz-submit:disabled { opacity: 0.4; cursor: not-allowed; }
 
-  .quiz-result {
-    margin-top: 16px; padding: 16px; border-radius: 10px;
-    text-align: center; display: none;
-  }
+  .quiz-result { margin-top: 16px; padding: 16px; border-radius: 10px; text-align: center; display: none; }
   .quiz-result.pass { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); }
   .quiz-result.fail { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.15); }
   .quiz-result-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
   .quiz-result.pass .quiz-result-title { color: #16a34a; }
   .quiz-result.fail .quiz-result-title { color: var(--red); }
   .quiz-result-sub { font-size: 0.82rem; color: var(--grey-text); margin-bottom: 12px; }
-  .btn-next { background: var(--orange); color: white; border: none; padding: 10px 24px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+  .btn-next { background: var(--orange); color: white; border: none; padding: 10px 24px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; }
   .btn-next:hover { background: #ff8c3a; }
-  .btn-retry { background: transparent; color: var(--red); border: 1px solid rgba(239,68,68,0.3); padding: 10px 24px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
-  .btn-retry:hover { background: rgba(239,68,68,0.05); }
+  .btn-retry { background: transparent; color: var(--red); border: 1px solid rgba(239,68,68,0.3); padding: 10px 24px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; }
 
-  /* FRED CTA */
-  .fred-cta {
-    background: var(--navy); border-radius: 14px; padding: 28px;
-    display: flex; align-items: center; gap: 20px; margin-top: 20px;
-  }
+  .fred-cta { background: var(--navy); border-radius: 14px; padding: 28px; display: flex; align-items: center; gap: 20px; margin-top: 20px; }
   .fred-cta img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid rgba(244,112,27,0.4); flex-shrink: 0; }
   .fred-cta-text { flex: 1; }
   .fred-cta-title { font-weight: 700; color: white; font-size: 0.95rem; margin-bottom: 4px; }
   .fred-cta-sub { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
-  .fred-cta-btn { background: var(--orange); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; transition: all 0.2s; }
-  .fred-cta-btn:hover { background: #ff8c3a; }
+  .fred-cta-btn { background: var(--orange); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
 
-  /* COMING SOON CHAPTERS */
   .coming-soon-section { margin-bottom: 48px; }
-  .coming-soon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
-  .coming-soon-card {
-    background: white; border-radius: 12px; padding: 20px;
-    border: 1px dashed rgba(0,0,0,0.1); opacity: 0.5; text-align: center;
-  }
+  .coming-soon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .coming-soon-card { background: white; border-radius: 12px; padding: 20px; border: 1px dashed rgba(0,0,0,0.1); opacity: 0.5; }
   .cs-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--grey-mid); margin-bottom: 6px; }
   .cs-title { font-weight: 600; font-size: 0.85rem; color: var(--grey-text); line-height: 1.4; margin-bottom: 8px; }
   .cs-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-mid); background: var(--grey-light); padding: 3px 8px; border-radius: 10px; display: inline-block; }
 
-  /* CERTIFICATE */
-  .certificate-section {
-    background: var(--navy); border-radius: 20px; padding: 48px 36px;
-    text-align: center; margin-top: 48px; display: none;
-  }
+  .certificate-section { background: var(--navy); border-radius: 20px; padding: 48px 36px; text-align: center; margin-top: 48px; display: none; }
   .certificate-section.visible { display: block; }
   .cert-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
   .cert-title { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 900; color: white; margin-bottom: 8px; letter-spacing: -0.02em; }
   .cert-sub { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 32px; }
-  .cert-box {
-    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 16px; padding: 36px; max-width: 500px; margin: 0 auto 32px;
-  }
-  .cert-awarded { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 8px; letter-spacing: 0.05em; }
+  .cert-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 36px; max-width: 500px; margin: 0 auto 32px; }
+  .cert-awarded { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
   .cert-name { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 700; color: white; font-style: italic; margin-bottom: 16px; }
   .cert-course { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
-  .cert-course strong { color: white; }
   .cert-date { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin-top: 20px; }
-  .cert-seal {
-    width: 64px; height: 64px; border-radius: 50%;
-    background: var(--orange); margin: 20px auto 0;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; color: white;
-  }
+  .cert-seal { width: 64px; height: 64px; border-radius: 50%; background: var(--orange); margin: 20px auto 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; color: white; }
 
   @media (max-width: 600px) {
     .course-body { padding: 32px 16px 60px; }
     .fred-cta { flex-direction: column; text-align: center; }
-    .progress-bar-wrap { padding: 10px 16px; }
   }
 </style>
 </head>
@@ -247,7 +164,7 @@
 
 <nav>
   <a href="https://www.startswithyouproject.com" class="nav-logo">Starts<span>With</span>You</a>
-  <a href="https://www.startswithyouproject.com" class="nav-back">← Back to site</a>
+  <a href="https://www.startswithyouproject.com" class="nav-back">← Back</a>
 </nav>
 
 <div class="progress-bar-wrap">
@@ -260,11 +177,11 @@
   <div class="course-hero-inner">
     <p class="course-tag">Course 01</p>
     <h1 class="course-title">Money Starts<br>With You</h1>
-    <p class="course-sub">Learn what money really is, how it works, and how to make it work for you — starting now. Based on the book by Per-Fredrik Emanuelsson.</p>
+    <p class="course-sub">What money really is, how it works, and how to make it work for you — starting now.</p>
     <div class="course-stats">
-      <div class="stat"><div class="stat-n">13</div><div class="stat-l">Chapters</div></div>
-      <div class="stat"><div class="stat-n">3</div><div class="stat-l">Modules live</div></div>
+      <div class="stat"><div class="stat-n">8</div><div class="stat-l">Modules live</div></div>
       <div class="stat"><div class="stat-n">3</div><div class="stat-l">Questions each</div></div>
+      <div class="stat"><div class="stat-n">1</div><div class="stat-l">Certificate</div></div>
     </div>
   </div>
 </div>
@@ -274,224 +191,194 @@
   <!-- INTRO -->
   <div class="intro-section">
     <h2>Welcome to the course</h2>
-    <p>This course is based on the book <em>Money Starts With You</em> by Per-Fredrik Emanuelsson — written for young people who want to understand money before life forces them to figure it out the hard way.</p>
-    <p>Each module has a short video, followed by three quick questions to check what you've taken in. When you've completed a module, Coach Fred is available to go deeper on anything you want to explore.</p>
-    <p>Work through the modules in order. There's no rush — but there's no shortcut either.</p>
+    <div class="intro-video-wrap">
+      <iframe src="https://www.youtube.com/embed/tdS-hpKlqF4" title="Money Course Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>This course is based on <em>Money Starts With You</em> by Per-Fredrik Emanuelsson. Each module has a short video followed by three questions. Pass the questions and move to the next module. Talk to Coach Fred any time to go deeper.</p>
   </div>
 
   <!-- CHAPTER 1 -->
-  <div class="chapter" id="chapter1">
+  <div class="chapter">
     <div class="chapter-header">
       <div class="chapter-num">1</div>
       <div class="chapter-title">What Does Success Mean to You?</div>
-      <div class="chapter-progress" id="ch1progress">0 / 1 modules</div>
+      <div class="chapter-progress" id="ch1progress">0 / 4 modules</div>
     </div>
 
-    <!-- Module 1 -->
+    <!-- 1.1 -->
     <div class="module" id="mod1">
       <div class="module-header" onclick="toggleModule('mod1')">
         <div class="module-status active" id="mod1-status">1</div>
-        <div class="module-info">
-          <div class="module-num">Module 1</div>
-          <div class="module-title">What Does Success Mean to You?</div>
-        </div>
+        <div class="module-info"><div class="module-num">Module 1.1</div><div class="module-title">Defining Success on Your Own Terms</div></div>
         <span class="module-tag tag-watch" id="mod1-tag">Watch</span>
       </div>
       <div class="module-content open" id="mod1-content">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/FtHQAkXNg2A" title="Module 1 — What Does Success Mean to You?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="quiz" id="mod1-quiz">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/_DZhiozFHg8" title="Module 1.1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
           <div class="quiz-title">Quick check — 3 questions</div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">1. According to the book, what is the most important first step before thinking about money?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m1q1" value="a"> Getting a job as soon as possible</label>
-              <label class="quiz-opt"><input type="radio" name="m1q1" value="b"> Defining what success means to YOU — not others</label>
-              <label class="quiz-opt"><input type="radio" name="m1q1" value="c"> Saving 10% of everything you earn</label>
-            </div>
-            <div class="quiz-feedback" id="m1q1-fb"></div>
-          </div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">2. In the book, failure is described as:</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m1q2" value="a"> Something to be avoided at all costs</label>
-              <label class="quiz-opt"><input type="radio" name="m1q2" value="b"> A sign that you're not trying hard enough</label>
-              <label class="quiz-opt"><input type="radio" name="m1q2" value="c"> A normal step toward success — feedback, not defeat</label>
-            </div>
-            <div class="quiz-feedback" id="m1q2-fb"></div>
-          </div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">3. Money is described in this chapter as:</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m1q3" value="a"> The ultimate goal everyone should chase</label>
-              <label class="quiz-opt"><input type="radio" name="m1q3" value="b"> A tool to support your definition of success — not the goal itself</label>
-              <label class="quiz-opt"><input type="radio" name="m1q3" value="c"> Something only adults need to worry about</label>
-            </div>
-            <div class="quiz-feedback" id="m1q3-fb"></div>
-          </div>
-
-          <button class="quiz-submit" id="mod1-submit" onclick="submitQuiz('mod1', {m1q1:'b', m1q2:'c', m1q3:'b'})">Submit answers</button>
-
-          <div class="quiz-result" id="mod1-result">
-            <div class="quiz-result-title" id="mod1-result-title"></div>
-            <div class="quiz-result-sub" id="mod1-result-sub"></div>
-            <div id="mod1-result-actions"></div>
-          </div>
+          <div class="quiz-q"><div class="quiz-q-text">1. Why is it important to define success on your own terms first?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m1q1" value="a"> So you can compare yourself to others more accurately</label><label class="quiz-opt"><input type="radio" name="m1q1" value="b"> Because chasing someone else's version of success leads you somewhere that may not make you happy</label><label class="quiz-opt"><input type="radio" name="m1q1" value="c"> Because schools don't teach you how to do this</label></div><div class="quiz-feedback" id="m1q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. In the book, what does money represent in relation to success?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m1q2" value="a"> The goal itself — the more you have the more successful you are</label><label class="quiz-opt"><input type="radio" name="m1q2" value="b"> A tool that helps you reach your version of success</label><label class="quiz-opt"><input type="radio" name="m1q2" value="c"> Something only relevant once you have a career</label></div><div class="quiz-feedback" id="m1q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. Real success is described as:</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m1q3" value="a"> A specific finish line you cross when you reach a salary target</label><label class="quiz-opt"><input type="radio" name="m1q3" value="b"> How you feel after you've crossed whatever finish line matters to you</label><label class="quiz-opt"><input type="radio" name="m1q3" value="c"> Something you only understand in your thirties</label></div><div class="quiz-feedback" id="m1q3-fb"></div></div>
+          <button class="quiz-submit" id="mod1-submit" onclick="submitQuiz('mod1',{m1q1:'b',m1q2:'b',m1q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod1-result"><div class="quiz-result-title" id="mod1-result-title"></div><div class="quiz-result-sub" id="mod1-result-sub"></div><div id="mod1-result-actions"></div></div>
         </div>
+        <div class="fred-cta" id="mod1-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">What does success actually look like for you? Ask Fred.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
+      </div>
+    </div>
 
-        <div class="fred-cta" id="mod1-fred" style="display:none;">
-          <img src="coachfred.jpg" alt="Coach Fred">
-          <div class="fred-cta-text">
-            <div class="fred-cta-title">Go deeper with Coach Fred</div>
-            <div class="fred-cta-sub">Ask Fred anything about success, failure, or what you just watched. He won't give you the answers — but he'll ask the right questions.</div>
-          </div>
-          <a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a>
+    <!-- 1.2 -->
+    <div class="module locked" id="mod2">
+      <div class="module-header" onclick="toggleModule('mod2')">
+        <div class="module-status pending" id="mod2-status">2</div>
+        <div class="module-info"><div class="module-num">Module 1.2</div><div class="module-title">Failure Is Not the Opposite of Success</div></div>
+        <span class="module-tag tag-locked" id="mod2-tag">Complete 1.1 first</span>
+      </div>
+      <div class="module-content" id="mod2-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/IfCi5v1BJbg" title="Module 1.2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
+          <div class="quiz-title">Quick check — 3 questions</div>
+          <div class="quiz-q"><div class="quiz-q-text">1. How is failure described in this module?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m2q1" value="a"> Something to be avoided at all costs</label><label class="quiz-opt"><input type="radio" name="m2q1" value="b"> Feedback — it tells you what didn't work so you can adjust and go again</label><label class="quiz-opt"><input type="radio" name="m2q1" value="c"> A sign that you picked the wrong goal</label></div><div class="quiz-feedback" id="m2q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. What does "failing forward" mean?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m2q2" value="a"> Failing quickly and moving on without learning anything</label><label class="quiz-opt"><input type="radio" name="m2q2" value="b"> Using each failure as a learning experience that moves you closer to your goal</label><label class="quiz-opt"><input type="radio" name="m2q2" value="c"> Pretending failure didn't happen</label></div><div class="quiz-feedback" id="m2q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. Why does failure have a bad reputation according to the book?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m2q3" value="a"> Because it always means you made the wrong decision</label><label class="quiz-opt"><input type="radio" name="m2q3" value="b"> Because society treats it as shameful rather than as a normal part of growth</label><label class="quiz-opt"><input type="radio" name="m2q3" value="c"> Because it always costs money</label></div><div class="quiz-feedback" id="m2q3-fb"></div></div>
+          <button class="quiz-submit" id="mod2-submit" onclick="submitQuiz('mod2',{m2q1:'b',m2q2:'b',m2q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod2-result"><div class="quiz-result-title" id="mod2-result-title"></div><div class="quiz-result-sub" id="mod2-result-sub"></div><div id="mod2-result-actions"></div></div>
         </div>
+        <div class="fred-cta" id="mod2-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">Tell Fred about a time you failed. See what he asks you.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
+      </div>
+    </div>
+
+    <!-- 1.3 -->
+    <div class="module locked" id="mod3">
+      <div class="module-header" onclick="toggleModule('mod3')">
+        <div class="module-status pending" id="mod3-status">3</div>
+        <div class="module-info"><div class="module-num">Module 1.3</div><div class="module-title">Success and Money: Getting the Relationship Right</div></div>
+        <span class="module-tag tag-locked" id="mod3-tag">Complete 1.2 first</span>
+      </div>
+      <div class="module-content" id="mod3-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/9rs_owXQ1ik" title="Module 1.3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
+          <div class="quiz-title">Quick check — 3 questions</div>
+          <div class="quiz-q"><div class="quiz-q-text">1. What does financial success actually mean according to this module?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m3q1" value="a"> Having more money than your peers</label><label class="quiz-opt"><input type="radio" name="m3q1" value="b"> Not being stressed about money, being able to save, and being able to handle change</label><label class="quiz-opt"><input type="radio" name="m3q1" value="c"> Earning a six-figure salary by age 25</label></div><div class="quiz-feedback" id="m3q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. What is the problem with treating money as the goal rather than the tool?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m3q2" value="a"> You end up saving too much and missing out on life</label><label class="quiz-opt"><input type="radio" name="m3q2" value="b"> You can end up with money but still be driving toward the wrong destination</label><label class="quiz-opt"><input type="radio" name="m3q2" value="c"> It makes you work too hard</label></div><div class="quiz-feedback" id="m3q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. What does money really buy you?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m3q3" value="a"> Status and respect from others</label><label class="quiz-opt"><input type="radio" name="m3q3" value="b"> Freedom and options</label><label class="quiz-opt"><input type="radio" name="m3q3" value="c"> Security from all of life's problems</label></div><div class="quiz-feedback" id="m3q3-fb"></div></div>
+          <button class="quiz-submit" id="mod3-submit" onclick="submitQuiz('mod3',{m3q1:'b',m3q2:'b',m3q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod3-result"><div class="quiz-result-title" id="mod3-result-title"></div><div class="quiz-result-sub" id="mod3-result-sub"></div><div id="mod3-result-actions"></div></div>
+        </div>
+        <div class="fred-cta" id="mod3-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">Ask Fred what freedom means to you specifically.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
+      </div>
+    </div>
+
+    <!-- 1.4 -->
+    <div class="module locked" id="mod4">
+      <div class="module-header" onclick="toggleModule('mod4')">
+        <div class="module-status pending" id="mod4-status">4</div>
+        <div class="module-info"><div class="module-num">Module 1.4</div><div class="module-title">The PhD Example: Do the Maths Early</div></div>
+        <span class="module-tag tag-locked" id="mod4-tag">Complete 1.3 first</span>
+      </div>
+      <div class="module-content" id="mod4-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/1q8M2punJD8" title="Module 1.4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
+          <div class="quiz-title">Quick check — 3 questions</div>
+          <div class="quiz-q"><div class="quiz-q-text">1. What is opportunity cost?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m4q1" value="a"> The cost of missing a sale or discount</label><label class="quiz-opt"><input type="radio" name="m4q1" value="b"> The value of what you give up when you choose one path over another</label><label class="quiz-opt"><input type="radio" name="m4q1" value="c"> The interest you pay on student loans</label></div><div class="quiz-feedback" id="m4q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. What is the key question to ask before making a big life decision like a PhD?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m4q2" value="a"> What will my parents think?</label><label class="quiz-opt"><input type="radio" name="m4q2" value="b"> Will living this life actually make me happy — and do the maths support it?</label><label class="quiz-opt"><input type="radio" name="m4q2" value="c"> What is the most prestigious option available?</label></div><div class="quiz-feedback" id="m4q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. The PhD example is NOT an argument against doing a PhD. What is it an argument for?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m4q3" value="a"> Choosing shorter, cheaper degrees instead</label><label class="quiz-opt"><input type="radio" name="m4q3" value="b"> Thinking carefully and doing the maths before committing to big decisions</label><label class="quiz-opt"><input type="radio" name="m4q3" value="c"> Going straight into work instead of further education</label></div><div class="quiz-feedback" id="m4q3-fb"></div></div>
+          <button class="quiz-submit" id="mod4-submit" onclick="submitQuiz('mod4',{m4q1:'b',m4q2:'b',m4q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod4-result"><div class="quiz-result-title" id="mod4-result-title"></div><div class="quiz-result-sub" id="mod4-result-sub"></div><div id="mod4-result-actions"></div></div>
+        </div>
+        <div class="fred-cta" id="mod4-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">Have a big decision coming up? Talk it through with Fred.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
       </div>
     </div>
   </div>
 
   <!-- CHAPTER 2 -->
-  <div class="chapter" id="chapter2">
+  <div class="chapter">
     <div class="chapter-header">
       <div class="chapter-num">2</div>
       <div class="chapter-title">What Is Money?</div>
-      <div class="chapter-progress" id="ch2progress">0 / 2 modules</div>
+      <div class="chapter-progress" id="ch2progress">0 / 4 modules</div>
     </div>
 
-    <!-- Module 2 -->
-    <div class="module locked" id="mod2">
-      <div class="module-header" onclick="toggleModule('mod2')">
-        <div class="module-status pending" id="mod2-status">2</div>
-        <div class="module-info">
-          <div class="module-num">Module 2</div>
-          <div class="module-title">What Is Money Really?</div>
-        </div>
-        <span class="module-tag tag-locked" id="mod2-tag">Complete module 1 first</span>
+    <!-- 2.1 -->
+    <div class="module locked" id="mod5">
+      <div class="module-header" onclick="toggleModule('mod5')">
+        <div class="module-status pending" id="mod5-status">5</div>
+        <div class="module-info"><div class="module-num">Module 2.1</div><div class="module-title">What Money Actually Is</div></div>
+        <span class="module-tag tag-locked" id="mod5-tag">Complete Chapter 1 first</span>
       </div>
-      <div class="module-content" id="mod2-content">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/wHkv1pHaV6o" title="Module 2 — What Is Money Really?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="quiz" id="mod2-quiz">
+      <div class="module-content" id="mod5-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/BtmD9-W9UtM" title="Module 2.1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
           <div class="quiz-title">Quick check — 3 questions</div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">1. Money is described in this chapter as three things. Which of these is NOT one of them?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m2q1" value="a"> A medium of exchange</label>
-              <label class="quiz-opt"><input type="radio" name="m2q1" value="b"> A measure of personal worth</label>
-              <label class="quiz-opt"><input type="radio" name="m2q1" value="c"> A store of value</label>
-            </div>
-            <div class="quiz-feedback" id="m2q1-fb"></div>
-          </div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">2. What happens to your money's buying power if it just sits in cash while inflation rises?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m2q2" value="a"> It stays exactly the same</label>
-              <label class="quiz-opt"><input type="radio" name="m2q2" value="b"> It increases because cash is safe</label>
-              <label class="quiz-opt"><input type="radio" name="m2q2" value="c"> It decreases — your money buys less over time</label>
-            </div>
-            <div class="quiz-feedback" id="m2q2-fb"></div>
-          </div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">3. Why does modern paper money have value?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m2q3" value="a"> Because it is made of valuable materials</label>
-              <label class="quiz-opt"><input type="radio" name="m2q3" value="b"> Because we collectively trust the system and the governments that back it</label>
-              <label class="quiz-opt"><input type="radio" name="m2q3" value="c"> Because banks decide its value each day</label>
-            </div>
-            <div class="quiz-feedback" id="m2q3-fb"></div>
-          </div>
-
-          <button class="quiz-submit" id="mod2-submit" onclick="submitQuiz('mod2', {m2q1:'b', m2q2:'c', m2q3:'b'})">Submit answers</button>
-
-          <div class="quiz-result" id="mod2-result">
-            <div class="quiz-result-title" id="mod2-result-title"></div>
-            <div class="quiz-result-sub" id="mod2-result-sub"></div>
-            <div id="mod2-result-actions"></div>
-          </div>
+          <div class="quiz-q"><div class="quiz-q-text">1. Money serves three functions. Which of these is NOT one of them?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m5q1" value="a"> A medium of exchange</label><label class="quiz-opt"><input type="radio" name="m5q1" value="b"> A measure of personal worth</label><label class="quiz-opt"><input type="radio" name="m5q1" value="c"> A store of value</label></div><div class="quiz-feedback" id="m5q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. Money is described as "emotionally dead." What does this mean?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m5q2" value="a"> Money makes people cold and uncaring</label><label class="quiz-opt"><input type="radio" name="m5q2" value="b"> Money has no feelings — it doesn't care about you, it's just a tool</label><label class="quiz-opt"><input type="radio" name="m5q2" value="c"> People who focus on money lose their emotions</label></div><div class="quiz-feedback" id="m5q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. Why do less than 25% of young adults demonstrate basic financial knowledge?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m5q3" value="a"> Because they are not smart enough</label><label class="quiz-opt"><input type="radio" name="m5q3" value="b"> Because nobody taught them — it's a gap in education, not a lack of ability</label><label class="quiz-opt"><input type="radio" name="m5q3" value="c"> Because money is too complicated for young people</label></div><div class="quiz-feedback" id="m5q3-fb"></div></div>
+          <button class="quiz-submit" id="mod5-submit" onclick="submitQuiz('mod5',{m5q1:'b',m5q2:'b',m5q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod5-result"><div class="quiz-result-title" id="mod5-result-title"></div><div class="quiz-result-sub" id="mod5-result-sub"></div><div id="mod5-result-actions"></div></div>
         </div>
-        <div class="fred-cta" id="mod2-fred" style="display:none;">
-          <img src="coachfred.jpg" alt="Coach Fred">
-          <div class="fred-cta-text">
-            <div class="fred-cta-title">Go deeper with Coach Fred</div>
-            <div class="fred-cta-sub">Ask Fred about money, inflation, or anything from this module.</div>
-          </div>
-          <a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a>
-        </div>
+        <div class="fred-cta" id="mod5-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">Ask Fred what money means to you personally.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
       </div>
     </div>
 
-    <!-- Module 3 -->
-    <div class="module locked" id="mod3">
-      <div class="module-header" onclick="toggleModule('mod3')">
-        <div class="module-status pending" id="mod3-status">3</div>
-        <div class="module-info">
-          <div class="module-num">Module 3</div>
-          <div class="module-title">Creating Value</div>
-        </div>
-        <span class="module-tag tag-locked" id="mod3-tag">Complete module 2 first</span>
+    <!-- 2.2 -->
+    <div class="module locked" id="mod6">
+      <div class="module-header" onclick="toggleModule('mod6')">
+        <div class="module-status pending" id="mod6-status">6</div>
+        <div class="module-info"><div class="module-num">Module 2.2</div><div class="module-title">Supply, Demand and Your Personal Economy</div></div>
+        <span class="module-tag tag-locked" id="mod6-tag">Complete 2.1 first</span>
       </div>
-      <div class="module-content" id="mod3-content">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/DZ62hyi52_0" title="Module 3 — Creating Value" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="quiz" id="mod3-quiz">
+      <div class="module-content" id="mod6-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/k-nQB18j4S0" title="Module 2.2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
           <div class="quiz-title">Quick check — 3 questions</div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">1. What are the four levers of creating value mentioned in the book?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m3q1" value="a"> Money, grades, contacts, luck</label>
-              <label class="quiz-opt"><input type="radio" name="m3q1" value="b"> Time, skill, ownership, and risk</label>
-              <label class="quiz-opt"><input type="radio" name="m3q1" value="c"> Saving, spending, investing, borrowing</label>
-            </div>
-            <div class="quiz-feedback" id="m3q1-fb"></div>
-          </div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">2. The supply and demand example in the book uses limited edition sneakers. What does this illustrate?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m3q2" value="a"> That expensive things are always better quality</label>
-              <label class="quiz-opt"><input type="radio" name="m3q2" value="b"> When demand exceeds supply, prices rise — the same principle applies to making yourself valuable</label>
-              <label class="quiz-opt"><input type="radio" name="m3q2" value="c"> That you should always buy things at retail price</label>
-            </div>
-            <div class="quiz-feedback" id="m3q2-fb"></div>
-          </div>
-
-          <div class="quiz-q">
-            <div class="quiz-q-text">3. What did the author do at INSEAD that changed his career more than any technical course?</div>
-            <div class="quiz-options">
-              <label class="quiz-opt"><input type="radio" name="m3q3" value="a"> Learned advanced financial modelling</label>
-              <label class="quiz-opt"><input type="radio" name="m3q3" value="b"> Built a network of wealthy contacts</label>
-              <label class="quiz-opt"><input type="radio" name="m3q3" value="c"> Learned to communicate complex ideas clearly to people outside his field</label>
-            </div>
-            <div class="quiz-feedback" id="m3q3-fb"></div>
-          </div>
-
-          <button class="quiz-submit" id="mod3-submit" onclick="submitQuiz('mod3', {m3q1:'b', m3q2:'b', m3q3:'c'})">Submit answers</button>
-
-          <div class="quiz-result" id="mod3-result">
-            <div class="quiz-result-title" id="mod3-result-title"></div>
-            <div class="quiz-result-sub" id="mod3-result-sub"></div>
-            <div id="mod3-result-actions"></div>
-          </div>
+          <div class="quiz-q"><div class="quiz-q-text">1. What happens to price when demand exceeds supply?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m6q1" value="a"> Price falls because more people are buying</label><label class="quiz-opt"><input type="radio" name="m6q1" value="b"> Price rises because what's available is scarce relative to demand</label><label class="quiz-opt"><input type="radio" name="m6q1" value="c"> Price stays the same — it's fixed by the manufacturer</label></div><div class="quiz-feedback" id="m6q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. How does supply and demand apply to YOU personally?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m6q2" value="a"> It doesn't — supply and demand only applies to products</label><label class="quiz-opt"><input type="radio" name="m6q2" value="b"> The more valuable and rare your skills, the more you can charge for them</label><label class="quiz-opt"><input type="radio" name="m6q2" value="c"> You should always buy things when demand is low</label></div><div class="quiz-feedback" id="m6q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. What did the INSEAD experience teach about value creation?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m6q3" value="a"> That expensive education always pays off</label><label class="quiz-opt"><input type="radio" name="m6q3" value="b"> That learning to communicate complex ideas clearly to others is one of the most valuable skills you can develop</label><label class="quiz-opt"><input type="radio" name="m6q3" value="c"> That networking is more important than knowledge</label></div><div class="quiz-feedback" id="m6q3-fb"></div></div>
+          <button class="quiz-submit" id="mod6-submit" onclick="submitQuiz('mod6',{m6q1:'b',m6q2:'b',m6q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod6-result"><div class="quiz-result-title" id="mod6-result-title"></div><div class="quiz-result-sub" id="mod6-result-sub"></div><div id="mod6-result-actions"></div></div>
         </div>
-        <div class="fred-cta" id="mod3-fred" style="display:none;">
-          <img src="coachfred.jpg" alt="Coach Fred">
-          <div class="fred-cta-text">
-            <div class="fred-cta-title">Go deeper with Coach Fred</div>
-            <div class="fred-cta-sub">Ask Fred about creating value, skills, or anything from this module.</div>
-          </div>
-          <a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a>
+        <div class="fred-cta" id="mod6-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">What makes you valuable? Ask Fred to help you figure it out.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
+      </div>
+    </div>
+
+    <!-- 2.3 -->
+    <div class="module locked" id="mod7">
+      <div class="module-header" onclick="toggleModule('mod7')">
+        <div class="module-status pending" id="mod7-status">7</div>
+        <div class="module-info"><div class="module-num">Module 2.3</div><div class="module-title">Inflation and Interest Rates</div></div>
+        <span class="module-tag tag-locked" id="mod7-tag">Complete 2.2 first</span>
+      </div>
+      <div class="module-content" id="mod7-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/BI74pDYj0fM" title="Module 2.3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
+          <div class="quiz-title">Quick check — 3 questions</div>
+          <div class="quiz-q"><div class="quiz-q-text">1. What does inflation mean for your money if it just sits in cash?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m7q1" value="a"> Its buying power stays the same</label><label class="quiz-opt"><input type="radio" name="m7q1" value="b"> Its buying power decreases — you can buy less with the same amount over time</label><label class="quiz-opt"><input type="radio" name="m7q1" value="c"> Its buying power increases because cash is safe</label></div><div class="quiz-feedback" id="m7q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. What are interest rates?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m7q2" value="a"> The fees banks charge for opening an account</label><label class="quiz-opt"><input type="radio" name="m7q2" value="b"> The price of borrowing money</label><label class="quiz-opt"><input type="radio" name="m7q2" value="c"> The rate at which prices rise each year</label></div><div class="quiz-feedback" id="m7q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. In the credit card example, a $1,000 phone bought on a card at 20% interest costs you approximately how much after a year of minimum payments?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m7q3" value="a"> $1,000 — the price doesn't change</label><label class="quiz-opt"><input type="radio" name="m7q3" value="b"> Over $1,200 — the interest adds significant cost</label><label class="quiz-opt"><input type="radio" name="m7q3" value="c"> $800 — minimum payments reduce the cost</label></div><div class="quiz-feedback" id="m7q3-fb"></div></div>
+          <button class="quiz-submit" id="mod7-submit" onclick="submitQuiz('mod7',{m7q1:'b',m7q2:'b',m7q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod7-result"><div class="quiz-result-title" id="mod7-result-title"></div><div class="quiz-result-sub" id="mod7-result-sub"></div><div id="mod7-result-actions"></div></div>
         </div>
+        <div class="fred-cta" id="mod7-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">Ask Fred how inflation affects your savings right now.</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
+      </div>
+    </div>
+
+    <!-- 2.4 -->
+    <div class="module locked" id="mod8">
+      <div class="module-header" onclick="toggleModule('mod8')">
+        <div class="module-status pending" id="mod8-status">8</div>
+        <div class="module-info"><div class="module-num">Module 2.4</div><div class="module-title">Why We Trust Money</div></div>
+        <span class="module-tag tag-locked" id="mod8-tag">Complete 2.3 first</span>
+      </div>
+      <div class="module-content" id="mod8-content">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/WWPGIKogq4c" title="Module 2.4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="quiz">
+          <div class="quiz-title">Quick check — 3 questions</div>
+          <div class="quiz-q"><div class="quiz-q-text">1. Why does paper money have value?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m8q1" value="a"> Because it is made from valuable materials</label><label class="quiz-opt"><input type="radio" name="m8q1" value="b"> Because we collectively trust the system and the governments that back it</label><label class="quiz-opt"><input type="radio" name="m8q1" value="c"> Because banks set its value each morning</label></div><div class="quiz-feedback" id="m8q1-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">2. What happens when trust in a currency collapses?</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m8q2" value="a"> The government simply prints more money and the problem is solved</label><label class="quiz-opt"><input type="radio" name="m8q2" value="b"> Hyperinflation can occur — prices spiral out of control and money loses its value rapidly</label><label class="quiz-opt"><input type="radio" name="m8q2" value="c"> Other currencies automatically become worthless too</label></div><div class="quiz-feedback" id="m8q2-fb"></div></div>
+          <div class="quiz-q"><div class="quiz-q-text">3. Money is described fundamentally as:</div><div class="quiz-options"><label class="quiz-opt"><input type="radio" name="m8q3" value="a"> A physical object with real intrinsic value</label><label class="quiz-opt"><input type="radio" name="m8q3" value="b"> A social agreement — it works because we all agree that it does</label><label class="quiz-opt"><input type="radio" name="m8q3" value="c"> A government invention designed to control people</label></div><div class="quiz-feedback" id="m8q3-fb"></div></div>
+          <button class="quiz-submit" id="mod8-submit" onclick="submitQuiz('mod8',{m8q1:'b',m8q2:'b',m8q3:'b'})">Submit answers</button>
+          <div class="quiz-result" id="mod8-result"><div class="quiz-result-title" id="mod8-result-title"></div><div class="quiz-result-sub" id="mod8-result-sub"></div><div id="mod8-result-actions"></div></div>
+        </div>
+        <div class="fred-cta" id="mod8-fred" style="display:none;"><img src="coachfred.jpg" alt="Coach Fred"><div class="fred-cta-text"><div class="fred-cta-title">Go deeper with Coach Fred</div><div class="fred-cta-sub">Ask Fred about crypto — is it the same kind of trust?</div></div><a href="/coach_fred_chat.html" class="fred-cta-btn">Talk to Fred →</a></div>
       </div>
     </div>
   </div>
@@ -507,10 +394,10 @@
       <div class="coming-soon-card"><div class="cs-num">Chapter 4</div><div class="cs-title">The Road Ahead</div><div class="cs-badge">Coming Soon</div></div>
       <div class="coming-soon-card"><div class="cs-num">Chapter 5</div><div class="cs-title">Independence Is Not an Accident</div><div class="cs-badge">Coming Soon</div></div>
       <div class="coming-soon-card"><div class="cs-num">Chapter 6</div><div class="cs-title">Backing Your Goals</div><div class="cs-badge">Coming Soon</div></div>
-      <div class="coming-soon-card"><div class="cs-num">Chapter 7</div><div class="cs-title">Financial Literacy</div><div class="cs-badge">Coming Soon</div></div>
-      <div class="coming-soon-card"><div class="cs-num">Chapter 8</div><div class="cs-title">Debt — Danger or Tool?</div><div class="cs-badge">Coming Soon</div></div>
-      <div class="coming-soon-card"><div class="cs-num">Chapter 9</div><div class="cs-title">Delayed Gratification</div><div class="cs-badge">Coming Soon</div></div>
-      <div class="coming-soon-card"><div class="cs-num">Chapter 10</div><div class="cs-title">Time, Your Greatest Asset</div><div class="cs-badge">Coming Soon</div></div>
+      <div class="coming-soon-card"><div class="cs-num">Chapter 7</div><div class="cs-title">Debt — Danger or Tool?</div><div class="cs-badge">Coming Soon</div></div>
+      <div class="coming-soon-card"><div class="cs-num">Chapter 8</div><div class="cs-title">Delayed Gratification</div><div class="cs-badge">Coming Soon</div></div>
+      <div class="coming-soon-card"><div class="cs-num">Chapter 9</div><div class="cs-title">Time, Your Greatest Asset</div><div class="cs-badge">Coming Soon</div></div>
+      <div class="coming-soon-card"><div class="cs-num">Chapter 10</div><div class="cs-title">Doing It</div><div class="cs-badge">Coming Soon</div></div>
     </div>
   </div>
 
@@ -518,12 +405,12 @@
   <div class="certificate-section" id="certificate">
     <p class="cert-tag">Course Complete</p>
     <h2 class="cert-title">Well done.</h2>
-    <p class="cert-sub">You've completed all available modules of Money Starts With You.</p>
+    <p class="cert-sub">You've completed Chapters 1 and 2 of Money Starts With You.</p>
     <div class="cert-box">
       <div class="cert-awarded">This certifies that</div>
-      <div class="cert-name" id="cert-name">Student</div>
-      <div class="cert-course">has completed <strong>Money Starts With You</strong></div>
-      <div class="cert-course" style="margin-top:4px;">Modules 1–3 · Starts With You</div>
+      <div class="cert-name">Student</div>
+      <div class="cert-course">has completed <strong>Money Starts With You — Chapters 1 & 2</strong></div>
+      <div class="cert-course" style="margin-top:4px;">8 modules · Starts With You</div>
       <div class="cert-seal">✓</div>
       <div class="cert-date" id="cert-date"></div>
     </div>
@@ -532,25 +419,33 @@
 </div>
 
 <script>
-  // State
-  const completed = new Set(JSON.parse(localStorage.getItem('swu_completed') || '[]'));
-  const totalModules = 3;
+  const completed = new Set(JSON.parse(localStorage.getItem('swu_money_completed') || '[]'));
+  const totalModules = 8;
+  const unlockMap = { mod1:'mod2', mod2:'mod3', mod3:'mod4', mod4:'mod5', mod5:'mod6', mod6:'mod7', mod7:'mod8' };
 
-  // Init
   window.onload = function() {
     updateProgress();
-    if (completed.has('mod1')) unlockModule('mod2');
-    if (completed.has('mod2')) unlockModule('mod3');
-    if (completed.has('mod1') && completed.has('mod2') && completed.has('mod3')) showCertificate();
     completed.forEach(id => markComplete(id, false));
+    if (completed.has('mod1')) unlockChain();
+    if (completed.size === totalModules) showCertificate();
   };
+
+  function unlockChain() {
+    let current = 'mod1';
+    while (completed.has(current) && unlockMap[current]) {
+      unlockModule(unlockMap[current], false);
+      current = unlockMap[current];
+    }
+  }
 
   function updateProgress() {
     const pct = Math.round((completed.size / totalModules) * 100);
     document.getElementById('progressFill').style.width = pct + '%';
     document.getElementById('progressPct').textContent = pct + '%';
-    document.getElementById('ch1progress').textContent = (completed.has('mod1') ? 1 : 0) + ' / 1 modules';
-    document.getElementById('ch2progress').textContent = ([...completed].filter(m => ['mod2','mod3'].includes(m)).length) + ' / 2 modules';
+    const ch1 = ['mod1','mod2','mod3','mod4'].filter(m => completed.has(m)).length;
+    const ch2 = ['mod5','mod6','mod7','mod8'].filter(m => completed.has(m)).length;
+    document.getElementById('ch1progress').textContent = ch1 + ' / 4 modules';
+    document.getElementById('ch2progress').textContent = ch2 + ' / 4 modules';
   }
 
   function toggleModule(id) {
@@ -563,20 +458,16 @@
   function submitQuiz(modId, answers) {
     const questions = Object.keys(answers);
     let correct = 0;
-
     questions.forEach(q => {
-      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      const selected = document.querySelector('input[name="' + q + '"]:checked');
       const feedback = document.getElementById(q + '-fb');
-      const opts = document.querySelectorAll(`input[name="${q}"]`);
-
+      const opts = document.querySelectorAll('input[name="' + q + '"]');
       if (!selected) return;
-
       opts.forEach(opt => {
         const label = opt.parentElement;
         if (opt.value === answers[q]) label.classList.add('correct');
         else if (opt.value === selected.value && opt.value !== answers[q]) label.classList.add('wrong');
       });
-
       if (selected.value === answers[q]) {
         correct++;
         feedback.textContent = '✓ Correct';
@@ -586,51 +477,42 @@
         feedback.className = 'quiz-feedback wrong';
       }
     });
-
-    // Disable all inputs
-    document.querySelectorAll(`#${modId}-quiz input`).forEach(i => i.disabled = true);
+    document.querySelectorAll('#' + modId + '-quiz input, #' + modId + '-content .quiz input').forEach(i => i.disabled = true);
     document.getElementById(modId + '-submit').disabled = true;
-
     const resultEl = document.getElementById(modId + '-result');
     const titleEl = document.getElementById(modId + '-result-title');
     const subEl = document.getElementById(modId + '-result-sub');
     const actionsEl = document.getElementById(modId + '-result-actions');
-
     resultEl.style.display = 'block';
-
     if (correct >= 2) {
       resultEl.className = 'quiz-result pass';
       titleEl.textContent = correct === 3 ? '3 / 3 — Perfect.' : '2 / 3 — Good enough.';
-      subEl.textContent = 'Module complete. Move on to the next one.';
+      subEl.textContent = 'Module complete.';
       actionsEl.innerHTML = '<button class="btn-next" onclick="completeModule(\'' + modId + '\')">Continue →</button>';
     } else {
       resultEl.className = 'quiz-result fail';
       titleEl.textContent = correct + ' / 3 — Watch the video again.';
-      subEl.textContent = 'Go back, re-watch the video, then try again.';
+      subEl.textContent = 'Re-watch, then try again.';
       actionsEl.innerHTML = '<button class="btn-retry" onclick="retryQuiz(\'' + modId + '\')">Try again</button>';
     }
   }
 
   function retryQuiz(modId) {
-    const quiz = document.getElementById(modId + '-quiz');
-    quiz.querySelectorAll('input[type=radio]').forEach(i => { i.checked = false; i.disabled = false; });
-    quiz.querySelectorAll('.quiz-opt').forEach(o => o.className = 'quiz-opt');
-    quiz.querySelectorAll('.quiz-feedback').forEach(f => f.className = 'quiz-feedback');
+    const content = document.getElementById(modId + '-content');
+    content.querySelectorAll('input[type=radio]').forEach(i => { i.checked = false; i.disabled = false; });
+    content.querySelectorAll('.quiz-opt').forEach(o => o.className = 'quiz-opt');
+    content.querySelectorAll('.quiz-feedback').forEach(f => f.className = 'quiz-feedback');
     document.getElementById(modId + '-result').style.display = 'none';
     document.getElementById(modId + '-submit').disabled = false;
   }
 
   function completeModule(modId) {
     completed.add(modId);
-    localStorage.setItem('swu_completed', JSON.stringify([...completed]));
+    localStorage.setItem('swu_money_completed', JSON.stringify([...completed]));
     markComplete(modId, true);
     updateProgress();
-
-    const next = { mod1: 'mod2', mod2: 'mod3' };
-    if (next[modId]) unlockModule(next[modId]);
-    if (completed.size === totalModules) {
-      setTimeout(showCertificate, 500);
-    }
+    if (unlockMap[modId]) unlockModule(unlockMap[modId], true);
+    if (completed.size === totalModules) setTimeout(showCertificate, 500);
   }
 
   function markComplete(modId, animate) {
@@ -638,7 +520,6 @@
     const status = document.getElementById(modId + '-status');
     const tag = document.getElementById(modId + '-tag');
     const fred = document.getElementById(modId + '-fred');
-
     module.classList.add('completed');
     status.className = 'module-status done';
     status.textContent = '✓';
@@ -646,18 +527,15 @@
     if (fred) fred.style.display = 'flex';
   }
 
-  function unlockModule(modId) {
+  function unlockModule(modId, scroll) {
     const module = document.getElementById(modId);
     const status = document.getElementById(modId + '-status');
     const tag = document.getElementById(modId + '-tag');
-
     module.classList.remove('locked');
     status.className = 'module-status active';
     if (tag) { tag.className = 'module-tag tag-watch'; tag.textContent = 'Watch'; }
-
-    // Auto-open
     document.getElementById(modId + '-content').classList.add('open');
-    setTimeout(() => { module.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
+    if (scroll) setTimeout(() => module.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
   }
 
   function showCertificate() {
@@ -667,13 +545,10 @@
     cert.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  // Highlight selected option
   document.addEventListener('change', function(e) {
     if (e.target.type === 'radio') {
       const name = e.target.name;
-      document.querySelectorAll(`input[name="${name}"]`).forEach(i => {
-        i.parentElement.classList.remove('selected');
-      });
+      document.querySelectorAll('input[name="' + name + '"]').forEach(i => i.parentElement.classList.remove('selected'));
       e.target.parentElement.classList.add('selected');
     }
   });
