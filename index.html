@@ -1196,18 +1196,10 @@
     </div>
     <div class="hero-visual">
       <div class="hero-card">
-        <div class="fred-intro">
-          <img src="coachfred.jpg" alt="Coach Fred" style="width:44px; height:44px; border-radius:50%; object-fit:cover; object-position:top; flex-shrink:0;">
-          <div>
-            <div class="fred-name">Coach Fred</div>
-            <div class="fred-role">Your AI learning guide</div>
-          </div>
-          <div class="fred-online">Online</div>
-        </div>
-        <div style="font-size:0.82rem; line-height:1.75; color:rgba(255,255,255,0.65);">
-          Built on the Starts With You book series and years of experience as a finance professional, coach, father, and husband.<br><br>
-          Coach Fred is the virtual me — available to every student, any time.
-        </div>
+        <img src="fredrik.jpg" alt="Fredrik Emanuelsson" style="width:100%; border-radius:12px; object-fit:cover; object-position:top; display:block; margin-bottom:20px; max-height:280px;">
+        <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:6px;">Fredrik Emanuelsson</div>
+        <div style="font-size:1rem; font-weight:700; color:white; margin-bottom:10px; font-family:'Fraunces',serif;">Author. Finance professional. Coach.</div>
+        <div style="font-size:0.82rem; line-height:1.7; color:rgba(255,255,255,0.6);">I spent 25 years in investment banking, wrote 4 books, and built this because nobody taught me any of this at school. Now I'm making sure you don't have the same gap.</div>
       </div>
     </div>
   </div>
@@ -1329,92 +1321,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- MONEY COURSE MODULES -->
-<section class="course-detail" id="modules">
-  <div class="course-detail-inner">
-    <div class="course-detail-header fade-in">
-      <div>
-        <p class="section-tag">Course 01 — Money</p>
-        <h2 class="section-title">What's inside the<br>Money course</h2>
-        <p class="section-sub" style="margin-top:16px;">10 modules built around the book <em>Money Starts With You</em>. Each one is a short video followed by a reflective question — no lectures, no jargon.</p>
-        <a href="/money-course.html" class="btn-primary" style="margin-top:32px; display:inline-block;">Watch Module 1 →</a>
-      </div>
-      <div class="module-list">
-        <a href="/money-course.html" class="module-item">
-          <div class="module-num" style="background:var(--orange);">1</div>
-          <div class="module-text">
-            <div class="module-title">What Does Success Mean to You?</div>
-            <div class="module-sub">Define your own version</div>
-          </div>
-        </a>
-        <a href="/money-course.html" class="module-item">
-          <div class="module-num" style="background:var(--orange);">2</div>
-          <div class="module-text">
-            <div class="module-title">What Is Money Really?</div>
-            <div class="module-sub">Beyond the obvious answer</div>
-          </div>
-        </a>
-        <a href="/money-course.html" class="module-item">
-          <div class="module-num" style="background:var(--orange);">3</div>
-          <div class="module-text">
-            <div class="module-title">Creating Value</div>
-            <div class="module-sub">The four levers</div>
-          </div>
-        </a>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">4</div>
-          <div class="module-text">
-            <div class="module-title">The Road Ahead</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">5</div>
-          <div class="module-text">
-            <div class="module-title">Independence Is Not an Accident</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">6</div>
-          <div class="module-text">
-            <div class="module-title">Backing Your Goals</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">7</div>
-          <div class="module-text">
-            <div class="module-title">Debt — Danger or Tool?</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">8</div>
-          <div class="module-text">
-            <div class="module-title">Delayed Gratification</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">9</div>
-          <div class="module-text">
-            <div class="module-title">Time Is Your Greatest Asset</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-        <div class="module-item" style="opacity:0.5; cursor:default;">
-          <div class="module-num">10</div>
-          <div class="module-text">
-            <div class="module-title">Doing It + Power of Choice</div>
-            <div class="module-sub">Coming soon</div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1563,46 +1469,9 @@
 </footer>
 
 <script>
-  // Video switcher
-  const videos = {
-    intro: 'https://www.youtube.com/embed/UdtL2x7T-ws',
-    mod1:  'https://www.youtube.com/embed/FtHQAkXNg2A',
-    mod2:  'https://www.youtube.com/embed/wHkv1pHaV6o',
-    mod3:  'https://www.youtube.com/embed/DZ62hyi52_0'
-  };
-
-  function switchVideo(key, tabEl, playlistEl) {
-    document.getElementById('main-video').src = videos[key];
-
-    // Update tabs
-    if (tabEl) {
-      document.querySelectorAll('.video-tab').forEach(t => t.classList.remove('active'));
-      tabEl.classList.add('active');
-    }
-
-    // Update playlist
-    document.querySelectorAll('.playlist-item').forEach(p => p.classList.remove('active'));
-    if (playlistEl) playlistEl.classList.add('active');
-
-    // Sync tab and playlist
-    const tabIndex = ['intro','mod1','mod2','mod3'].indexOf(key);
-    const tabs = document.querySelectorAll('.video-tab');
-    const items = document.querySelectorAll('.playlist-item');
-    tabs.forEach(t => t.classList.remove('active'));
-    items.forEach(i => i.classList.remove('active'));
-    if (tabs[tabIndex]) tabs[tabIndex].classList.add('active');
-    if (items[tabIndex]) items[tabIndex].classList.add('active');
-  }
-
-  // Scroll fade-in
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-      }
-    });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
