@@ -1152,7 +1152,7 @@
   <a href="#" class="nav-logo">Starts<span>With</span>You</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#courses" onclick="closeMenu()">Courses</a></li>
-    <li><a href="#videos" onclick="closeMenu()">Watch</a></li>
+    <li><a href="/money-course.html" onclick="closeMenu()">Watch</a></li>
     <li><a href="#coach-fred" onclick="closeMenu()">Coach Fred</a></li>
     <li><a href="#about" onclick="closeMenu()">About</a></li>
     <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Schools — Get Access</a></li>
@@ -1418,63 +1418,6 @@
   </div>
 </section>
 
-<!-- VIDEOS -->
-<section class="video-section" id="videos">
-  <div class="video-section-inner">
-    <p class="section-tag" style="color:var(--orange);">Watch the Course</p>
-    <h2 class="section-title" style="color:white; margin-bottom:8px;">Money Starts With You</h2>
-    <p style="color:rgba(255,255,255,0.55); font-size:0.95rem; margin-bottom:40px;">Start with the introduction, then work through the modules in order.</p>
-
-    <div class="video-tabs">
-      <button class="video-tab active" onclick="switchVideo('intro', this)">Introduction</button>
-      <button class="video-tab" onclick="switchVideo('mod1', this)">Module 1</button>
-      <button class="video-tab" onclick="switchVideo('mod2', this)">Module 2</button>
-      <button class="video-tab" onclick="switchVideo('mod3', this)">Module 3</button>
-    </div>
-
-    <div class="video-grid">
-      <div class="video-main">
-        <iframe id="main-video"
-          src="https://www.youtube.com/embed/UdtL2x7T-ws"
-          title="Starts With You Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="video-playlist">
-        <div class="playlist-item active" onclick="switchVideo('intro', null, this)">
-          <img src="https://img.youtube.com/vi/UdtL2x7T-ws/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
-          <div class="playlist-info">
-            <div class="playlist-title">Introduction — Starts With You</div>
-            <div class="playlist-dur">Who Fredrik is and what this is</div>
-          </div>
-        </div>
-        <div class="playlist-item" onclick="switchVideo('mod1', null, this)">
-          <img src="https://img.youtube.com/vi/FtHQAkXNg2A/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
-          <div class="playlist-info">
-            <div class="playlist-title">Module 1 — What Does Success Mean to You?</div>
-            <div class="playlist-dur">Define your own version first</div>
-          </div>
-        </div>
-        <div class="playlist-item" onclick="switchVideo('mod2', null, this)">
-          <img src="https://img.youtube.com/vi/wHkv1pHaV6o/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
-          <div class="playlist-info">
-            <div class="playlist-title">Module 2 — What Is Money Really?</div>
-            <div class="playlist-dur">Beyond the obvious answer</div>
-          </div>
-        </div>
-        <div class="playlist-item" onclick="switchVideo('mod3', null, this)">
-          <img src="https://img.youtube.com/vi/DZ62hyi52_0/mqdefault.jpg" style="width:72px; height:48px; border-radius:6px; object-fit:cover; flex-shrink:0;">
-          <div class="playlist-info">
-            <div class="playlist-title">Module 3 — Creating Value</div>
-            <div class="playlist-dur">The four levers</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- MEET COACH FRED -->
 <section style="background: var(--navy); padding: 80px 40px;" id="coach-fred">
   <div style="max-width: 1100px; margin: 0 auto;">
@@ -1509,51 +1452,6 @@
 
     <div style="text-align: center;">
       <a href="/coach_fred_chat.html" style="background: var(--orange); color: white; text-decoration: none; padding: 16px 40px; border-radius: 10px; font-weight: 700; font-size: 1rem; display: inline-block; transition: all 0.2s;">Talk to Coach Fred →</a>
-    </div>
-  </div>
-</section>
-
-<!-- COACH FRED OLD SECTION REPLACED -->
-<section class="fred-section" id="coach-fred-detail" style="display:none;">
-  <div class="fred-inner">
-    <div class="fred-visual-box fade-in">
-      <img src="coachfred.jpg" alt="Coach Fred" style="width:120px; height:120px; border-radius:50%; object-fit:cover; object-position:top; margin:0 auto 20px; display:block; border:4px solid rgba(255,255,255,0.15);">
-      <div style="color:white; font-family:'Fraunces',serif; font-size:1.4rem; font-weight:700;">Coach Fred</div>
-      <div style="color:rgba(255,255,255,0.5); font-size:0.82rem; margin-top:4px;">AI Learning Guide</div>
-      <div class="fred-chat-preview">
-        <p class="chat-bubble">"Money isn't about being rich. It's about having options. The sooner you understand that, the better every decision becomes."</p>
-        <p class="chat-attribution">— Coach Fred</p>
-      </div>
-    </div>
-    <div class="fred-content fade-in">
-      <p class="section-tag">Meet Your AI Guide</p>
-      <h2>Coach Fred is always<br>in the room.</h2>
-      <p>Every student gets access to Coach Fred — an AI guide trained on the Starts With You methodology. Ask anything. Get honest, age-appropriate answers that push you to think, not just consume.</p>
-      <p>Fred doesn't give you the answer. He helps you find it.</p>
-      <div class="fred-features">
-        <div class="fred-feature">
-          <div class="fred-feature-icon" style="background:rgba(244,112,27,0.1); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--orange);">24/7</div>
-          <div class="fred-feature-text">
-            <div class="fred-feature-title">Always available</div>
-            <div class="fred-feature-desc">24/7, between lessons, before exams, whenever a question comes up.</div>
-          </div>
-        </div>
-        <div class="fred-feature">
-          <div class="fred-feature-icon" style="background:rgba(244,112,27,0.1); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--orange);">Safe</div>
-          <div class="fred-feature-text">
-            <div class="fred-feature-title">Safe and age-appropriate</div>
-            <div class="fred-feature-desc">Built with safeguarding in mind. Stays on topic. Never inappropriate.</div>
-          </div>
-        </div>
-        <div class="fred-feature">
-          <div class="fred-feature-icon" style="background:rgba(244,112,27,0.1); border-radius:8px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:700; color:var(--orange);">Ask</div>
-          <div class="fred-feature-text">
-            <div class="fred-feature-title">Socratic, not preachy</div>
-            <div class="fred-feature-desc">Fred asks questions back. The goal is thinking, not passive listening.</div>
-          </div>
-        </div>
-      </div>
-      <a href="/coach_fred_chat.html" class="btn-fred">Talk to Coach Fred →</a>
     </div>
   </div>
 </section>
